@@ -1,5 +1,6 @@
 const CONTAINER = document.querySelector('#container');
 const RESET_BUTTON = document.querySelector('#reset');
+const CLEAR_GRID_BUTTON = document.querySelector('#clear');
 const GRID_SIZE_INPUT = document.querySelector('#input');
 const CLASSIC_OPTION_BUTTON = document.querySelector('#classic');
 const VIBRANT_OPTION_BUTTON = document.querySelector('#rgb');
@@ -36,12 +37,6 @@ function deleteGrid() {
     }
 }
 
-function deactivateSquares() {
-    curerntGridSquares.forEach(square => {
-        square.style['background-color'] = DEFAULT_SQUARE_COLOR;
-    });
-}
-
 function updateGrid(event) {
     if (event.key === 'Enter'){
         let value = GRID_SIZE_INPUT.value;
@@ -67,6 +62,11 @@ function setVibrantColor() {
     }))
 }
 
+function clearGrid() {
+    const gridSquares = document.querySelectorAll(`.${GRID_SQUARE_CLASS}`);
+    gridSquares.forEach(square => square.style['background-color'] = DEFAULT_SQUARE_COLOR);
+}
+
 function resetGrid() {
     window.location.reload();
 }
@@ -82,6 +82,7 @@ function checkForEvents() {
     RESET_BUTTON.addEventListener('click', () => resetGrid());
     CLASSIC_OPTION_BUTTON.addEventListener('click', () => setClassicColor());
     VIBRANT_OPTION_BUTTON.addEventListener('click', () => setVibrantColor());
+    CLEAR_GRID_BUTTON.addEventListener('click', () => clearGrid());
 }
 
 function runApp() {

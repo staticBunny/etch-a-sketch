@@ -1,8 +1,33 @@
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Courier New", "Monaco", sans-serif;
+    /*background-color: #8B4513;*/
+    background-color: lightblue;
+}
+
 #container {
     display: flex;
+    gap: 50px;
+}
+
+#inputContainer {
+    display: flex;
     flex-direction: column;
-    height: 512px;
-    width: 512px;
+    justify-content: center;
+    gap: 30px;
+    background-color: #F5DEB3;
+    border-radius: 50px;
+}
+
+#gridContainer {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 600px;
 }
 
 .row {
@@ -15,12 +40,9 @@
     border: 1px solid black;
 }
 
-.active {
-    background-color: black;
-}
-
 #squareColorContainer,
 #gridSizeContainer {
     display: flex;
     gap: 10px;
+    align-self: center;
 }

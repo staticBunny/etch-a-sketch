@@ -1,4 +1,4 @@
-const CONTAINER = document.querySelector('#container');
+const CONTAINER = document.querySelector('#gridContainer');
 const RESET_BUTTON = document.querySelector('#reset');
 const CLEAR_GRID_BUTTON = document.querySelector('#clear');
 const GRID_SIZE_INPUT = document.querySelector('#input');
@@ -87,6 +87,7 @@ function checkForEvents() {
 
 function runApp() {
     makeGrid(16);
+    clearGrid()
     checkForEvents();
 }
 

@@ -7,21 +7,26 @@
         <script src="app.js" defer></script>
     </head>
     <body>
-        <div id="inputContainer">
-            <div id="gridSizeContainer">
-                <div class="text">0 < </div>
-                <input id="input" placeholder="Enter grid size">
-                <div class="text"> < 101 </div>
+        <h1>Etch-a-Sketch</h1>
+        <h2>Get Creative</h2>
+        <div id="container">
+            <div id="inputContainer">
+                <div id="gridSizeContainer">
+                    <div class="text">0 < </div>
+                    <input id="input" placeholder="Enter grid size">
+                    <div class="text"> < 101 </div>
+                </div>
+
+                <div id="squareColorContainer">
+                    <div class="text">Select square color: </div>
+                    <button id="classic">Classic</button>
+                    <button id="rgb">Vibrant</button>
+                </div>
+                <button id="clear">Clear grid</button>
+                <button id="reset">Reset</button>
             </div>
 
-            <div id="squareColorContainer">
-                <div class="text">Select square color: </div>
-                <button id="classic">Classic</button>
-                <button id="rgb">Vibrant</button>
-            </div>
+            <div id="gridContainer"></div>
         </div>
-        <div id="container"></div>
-        <button id="clear">Clear grid</button>
-        <button id="reset">Reset</button>
     </body>
 </html>

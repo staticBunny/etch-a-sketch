@@ -1,18 +1,25 @@
 #container {
     display: flex;
     flex-direction: column;
+    height: 512px;
+    width: 512px;
 }
 
 .row {
     display:flex;
+    flex-grow: 1;
 }
 
 .gridSquare {
-    height: 20px;
-    width: 20px;
+    flex-grow: 1; 
     border: 1px solid black;
 }
 
 .active {
     background-color: black;
+}
+
+#inputContainer {
+    display: flex;
+    gap: 10px;
 }

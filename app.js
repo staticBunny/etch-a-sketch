@@ -1,4 +1,6 @@
 const container = document.querySelector('#container');
+const RESET_BUTTON = document.querySelector('#reset');
+
 const ROW_CLASS = 'row';
 const GRID_SQUARE_CLASS = 'gridSquare';
 const ACTIVE_CLASS = 'active';
@@ -23,6 +25,10 @@ function changeSquareColor(gridSquareClass, activeClass) {
     }))
 }
 
+function resetGrid(resetButton) {
+    resetButton.addEventListener('click', () => window.location.reload());
+}
+
 makeGrid(container, ROW_CLASS, GRID_SQUARE_CLASS);
 changeSquareColor(GRID_SQUARE_CLASS, ACTIVE_CLASS);
-console.log(container);
+resetGrid(RESET_BUTTON);

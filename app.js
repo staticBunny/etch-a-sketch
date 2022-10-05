@@ -25,6 +25,7 @@ function makeGrid(gridSize) {
         CONTAINER.appendChild(rowDiv);
     }
 
+    clearGrid();
     if (latestColor === 'classic') setClassicColor();
     else setVibrantColor();
 }
@@ -87,7 +88,6 @@ function checkForEvents() {
 
 function runApp() {
     makeGrid(16);
-    clearGrid()
     checkForEvents();
 }
 

@@ -19,7 +19,8 @@
     background-color: black;
 }
 
-#inputContainer {
+#squareColorContainer,
+#gridSizeContainer {
     display: flex;
     gap: 10px;
 }
